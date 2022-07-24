@@ -22,6 +22,19 @@ slide.addEventListener('transitionend',function end(){
     if(index===4){
         slide.style.transition='0.5s';
         index=0;
-        slide.style.transform='translateX('+(0)+'px)';
+        slide.style.transform='translateX('+0+'px)';
     }
 })
+
+prevBtn.onclick=()=>{
+    if(index!=0){
+        slide.style.transform='translateX('+(-slideWidth*(index-1))+'px)';
+        index--;
+    }
+}
+nextBtn.onclick=()=>{
+    if(index!=4){
+        slide.style.transform='translateX('+(-slideWidth*(index+1))+'px)';
+        index++;
+    }
+}
